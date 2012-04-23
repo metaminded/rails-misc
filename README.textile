@@ -38,13 +38,13 @@ use in simple_forms
   f.input :text_field, as: :ace_editor
 </pre>
 
-wire in js-maifest:
+wire in js-manifest:
 
 <pre>
   //= require rails-misc/date_picker_input
 </pre>
 
-and in css-maifest
+and in css-manifest
 
 <pre>
   //= require rails-misc/date_picker_input

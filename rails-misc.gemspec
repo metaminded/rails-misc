@@ -7,11 +7,10 @@ require "rails-misc/version"
 Gem::Specification.new do |s|
   s.name        = "rails-misc"
   s.version     = RailsMisc::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsMisc."
-  s.description = "TODO: Description of RailsMisc."
+  s.authors     = ["The metaminded Team"]
+  s.email       = ["team@metaminded.com"]
+  s.summary     = "Some stuff we need in several places"
+  s.description = "Some Stuff we need in several Rails Apps"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

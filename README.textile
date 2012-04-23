@@ -7,33 +7,45 @@ h3. Date Picker Input
 
 use in simple_forms
 
+<pre>
   f.input :done_on, as: :date_picker
+</pre>
 
 wire in js-manifest:
 
+<pre>
   //= require jquery-ui
   //= require rails-misc/date_picker_input
+</pre>
 
 if necessary (you don't completely include jquery-ui anyway), wire css
 
+<pre>
   //= require rails-misc/date_picker_input
-
+</pre>
 
 h3. Ace Editor Input
 
 include 3rd party gem
 
+<pre>
   gem 'ace-rails-ap'
+</pre>
 
 use in simple_forms
 
+<pre>
   f.input :text_field, as: :ace_editor
+</pre>
 
 wire in js-maifest:
 
+<pre>
   //= require rails-misc/date_picker_input
+</pre>
 
 and in css-maifest
 
+<pre>
   //= require rails-misc/date_picker_input
-
+</pre>

@@ -1,0 +1,39 @@
+h1. RailsMisc
+
+h2. Inputs
+
+
+h3. Date Picker Input
+
+use in simple_forms
+
+  f.input :done_on, as: :date_picker
+
+wire in js-manifest:
+
+  //= require jquery-ui
+  //= require rails-misc/date_picker_input
+
+if necessary (you don't completely include jquery-ui anyway), wire css
+
+  //= require rails-misc/date_picker_input
+
+
+h3. Ace Editor Input
+
+include 3rd party gem
+
+  gem 'ace-rails-ap'
+
+use in simple_forms
+
+  f.input :text_field, as: :ace_editor
+
+wire in js-maifest:
+
+  //= require rails-misc/date_picker_input
+
+and in css-maifest
+
+  //= require rails-misc/date_picker_input
+

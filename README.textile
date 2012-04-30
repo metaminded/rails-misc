@@ -50,29 +50,3 @@ and in css-manifest
   //= require rails-misc/editor_ace_input
 </pre>
 
-
-h3. TinyMce Editor Input
-
-include 3rd party gem
-
-<pre>
-  gem 'ace-rails-ap'
-</pre>
-
-use in simple_forms
-
-<pre>
-  f.input :text_field, as: :editor_ace
-</pre>
-
-wire in js-manifest:
-
-<pre>
-  //= require rails-misc/editor_ace_input
-</pre>
-
-and in css-manifest
-
-<pre>
-  //= require rails-misc/editor_ace_input
-</pre>

@@ -12,8 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = "Some stuff we need in several places"
   s.description = "Some Stuff we need in several Rails Apps"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.textile"]
 
   s.add_dependency "rails", "~> 3.2.1"
   # s.add_dependency "jquery-rails"

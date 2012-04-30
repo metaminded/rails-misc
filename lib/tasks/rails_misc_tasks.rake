@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :rails-misc do
+# task :rails_misc do
 #   # Task goes here
 # end

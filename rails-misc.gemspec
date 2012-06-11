@@ -5,7 +5,7 @@ require "rails_misc/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rails-misc"
+  s.name        = "',"
   s.version     = RailsMisc::VERSION
   s.authors     = ["The metaminded Team"]
   s.email       = ["team@metaminded.com"]

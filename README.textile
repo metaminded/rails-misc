@@ -15,13 +15,13 @@ wire in js-manifest:
 
 <pre>
   //= require jquery-ui
-  //= require rails-misc/date_picker_input
+  //= require ',/date_picker_input
 </pre>
 
 if necessary (you don't completely include jquery-ui anyway), wire css
 
 <pre>
-  //= require rails-misc/date_picker_input
+  //= require ',/date_picker_input
 </pre>
 
 h3. Ace Editor Input
@@ -41,12 +41,12 @@ use in simple_forms
 wire in js-manifest:
 
 <pre>
-  //= require rails-misc/editor_ace_input
+  //= require ',/editor_ace_input
 </pre>
 
 and in css-manifest
 
 <pre>
-  //= require rails-misc/editor_ace_input
+  //= require ',/editor_ace_input
 </pre>
 

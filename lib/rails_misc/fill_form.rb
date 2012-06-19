@@ -29,7 +29,7 @@ class ActionDispatch::IntegrationTest
     yield if block_given?
     case submit
     when String then click_button submit
-    when :submit then find(:xpath, '/input[@type="submit"]').click
+    when :submit then find(:xpath, 'form/input[@type="submit"]').click
     else raise "Don't know how to submit `#{submit}`."
     end
   end

@@ -7,6 +7,7 @@ class ActionDispatch::IntegrationTest
       id = "#{form_name}_#{param_name}"
       case val
       when String then fill_in id, with: val
+      when Fixnum, Float then fill_in id, with: val.to_s
       when Symbol then select val.to_s, from: id
       when true then check(id)
       when false then uncheck(id)
@@ -21,11 +22,12 @@ class ActionDispatch::IntegrationTest
         select MONTH_NAMES[val.month], from: "#{id}_2i"
         select val.day.to_s, from: "#{id}_3i"
       when File then attach_file(id, val.to_path)
+      when Hash then fill_form(id, val, nil)
       else raise "Don't know what to do with `#{val}` on `#{id}`."
       end
     end
     yield if block_given?
-    click_button submit
+    click_button submit if submit
   end
 
   def assert_path_is(path)

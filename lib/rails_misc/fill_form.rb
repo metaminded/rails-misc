@@ -27,7 +27,11 @@ class ActionDispatch::IntegrationTest
       end
     end
     yield if block_given?
-    click_button submit if submit
+    case submit
+    when String then click_button submit
+    when :submit then find(:xpath, '/input[@type="submit"]').click
+    else raise "Don't know how to submit `#{submit}`."
+    end
   end
 
   def assert_path_is(path)

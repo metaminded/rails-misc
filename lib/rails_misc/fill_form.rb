@@ -26,10 +26,13 @@ class ActionDispatch::IntegrationTest
       else raise "Don't know what to do with `#{val}` on `#{id}`."
       end
     end
+
     yield if block_given?
+
     case submit
     when String then click_button submit
-    when :submit then find(:xpath, 'form/input[@type="submit"]').click
+    when :submit then find(:xpath, "//form//input[@type='submit'][@name='commit']").click
+    when false, nil then "I'm happy!"
     else raise "Don't know how to submit `#{submit}`."
     end
   end

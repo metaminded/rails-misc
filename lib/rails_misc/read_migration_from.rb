@@ -17,6 +17,9 @@ module MigrationHelpers
     execute read_migration_from(filespec, name)
   end
 
+  def migration_from(filespec, name='default')
+    instance_exec read_migration_from(filespec, name)
+  end
 end
 
 ActiveRecord::Migration.send :include, MigrationHelpers

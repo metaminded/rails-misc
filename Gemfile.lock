@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    ', (0.0.1)
-      rails (~> 3.2.3)
+    rails_misc (0.0.1)
+      rails (~> 3.2.1)
 
 GEM
   remote: http://rubygems.org/
@@ -93,5 +93,5 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
-  ',!
+  rails_misc!
   sqlite3

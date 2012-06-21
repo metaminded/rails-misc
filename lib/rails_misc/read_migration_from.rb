@@ -7,8 +7,8 @@ module MigrationHelpers
     blocks = s.split /^__+\s*/
     mm = {'default' => blocks[0]}
     blocks[1..-1].each do |b|
-      bb = b.split("\n")
-      mm[bb[0].strip] = bb[1..-2].join("\n").strip
+      bb = b.split("\n").map{|l|l.strip.presence}.compact
+      mm[bb[0]] = bb[1..-1].join("\n")
     end
     mm[name.to_s] or raise("No migration named `#{name}` found in `#{filespec}`.")
   end

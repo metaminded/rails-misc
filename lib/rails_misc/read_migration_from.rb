@@ -18,7 +18,7 @@ module MigrationHelpers
   end
 
   def migration_from(filespec, name='default')
-    instance_exec read_migration_from(filespec, name)
+    instance_eval read_migration_from(filespec, name)
   end
 end
 

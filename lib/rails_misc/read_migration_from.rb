@@ -4,13 +4,13 @@ module MigrationHelpers
     s = File.new(File.join(Rails.root, "app", filespec)).read
     s = s.split(/^__END__$/)[1]
     raise "no `__END__` found in file" unless s
-    blocks = s.split /^___+\s*/
+    blocks = s.split /^__+\s*/
     mm = {'default' => blocks[0]}
     blocks[1..-1].each do |b|
       bb = b.split("\n")
-      mm[bb[0].strip] = bb[1..-2].join("\n")
+      mm[bb[0].strip] = bb[1..-2].join("\n").strip
     end
-    mm[name.to_s]
+    mm[name.to_s] || raise "No migration named `#{name}` found in `#{filespec}`."
   end
 
   def execute_migration_from(filespec, name='default')

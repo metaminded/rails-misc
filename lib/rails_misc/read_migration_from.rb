@@ -10,7 +10,7 @@ module MigrationHelpers
       bb = b.split("\n")
       mm[bb[0].strip] = bb[1..-2].join("\n").strip
     end
-    mm[name.to_s] || raise "No migration named `#{name}` found in `#{filespec}`."
+    mm[name.to_s] or raise("No migration named `#{name}` found in `#{filespec}`.")
   end
 
   def execute_migration_from(filespec, name='default')

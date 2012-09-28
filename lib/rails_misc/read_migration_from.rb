@@ -1,7 +1,11 @@
 module MigrationHelpers
 
   def read_migration_from(filespec, name='default')
-    s = File.new(File.join(Rails.root, "app", filespec)).read
+    if filespec.start_with?("/")
+      s = File.new(filespec).read
+    else
+      s = File.new(File.join(Rails.root, "app", filespec)).read
+    end
     s = s.split(/^__END__$/)[1]
     raise "no `__END__` found in file" unless s
     blocks = s.split /^__+\s*/

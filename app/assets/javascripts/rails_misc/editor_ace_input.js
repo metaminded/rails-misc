@@ -1,7 +1,7 @@
 // ACE Editor
 //= require ace/ace
-//= require theme-textmate
-//= require mode-html
+//= require ace/theme-textmate
+//= require ace/mode-html
 
 var copyAce;
 

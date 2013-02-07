@@ -1,5 +1,5 @@
 // ACE Editor
-//= require ace
+//= require ace/ace
 //= require theme-textmate
 //= require mode-html
 

@@ -1,5 +1,5 @@
 class ActiveRecord::Base
-  MATCHCODE_PATTERN = /^([a-z]|[0-9]|-|\/|\.|_)+$/
+  MATCHCODE_PATTERN = /\A([a-z]|[0-9]|-|\/|\.|_)+\Z/
   def self.act_as_matchcoded(matchcode=:matchcode)
     validates_format_of matchcode, :with => MATCHCODE_PATTERN, :allow_nil => true
     validates_uniqueness_of matchcode, :allow_nil => true
